@@ -16,3 +16,13 @@ You may need to refer to this documentation during the exam: https://kubernetes.
 After you have created the TLS secret, add the following in the nginx-controller deployment:
 <br>```--default-ssl-certificate=namespace/tls-secret-name```<br>
 Replace namespace with the namespace the secret is in and tls-secret-name with the name of the TLS secret. 
+
+## Monitoring, Logging and Runtime Security (20%)
+
+### Falco
+If Falco is not installed as a service, then you could run the command:
+<br>```falco -U | grep httpd```<br>
+Alternatively, you can run the command:
+<br>```cat /var/log/syslog | grep httpd```<br>
+Copy the container ID and run:
+<br>```crictl inspect <container ID> | grep pod.name```<br>
