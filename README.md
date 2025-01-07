@@ -26,3 +26,8 @@ Alternatively, you can run the command:
 <br>```cat /var/log/syslog | grep httpd```<br>
 Copy the container ID and run:
 <br>```crictl inspect <container ID> | grep pod.name```<br>
+
+## Minimize Microservice Vulnerabilities (20%)
+
+### Cilium
+Create a layer 4 network policy. Allow ingress from another namespace.
